@@ -50,8 +50,6 @@ var haiku_data = {
 // console.log(haiku_generated);
 
 
-
-
 var bullshit_data = {
     
     debut : ["Où que tu sois,",
@@ -84,19 +82,28 @@ $(document).ready(function () {
         console.log(theme_selected.val());
         var qtt_citation = $("input#qtt");
         console.log(qtt_citation.val());
+
+        let recueil_citation = new Array;
+        let generator;
+
         if (theme_selected.val() == "haiku"){
-            var haiku = new Citation(haiku_data.debut, haiku_data.milieu, haiku_data.fin);
-            var haiku_generated = haiku.generate();
-            console.log(haiku_generated);
+            generator = new Citation(haiku_data.debut, haiku_data.milieu, haiku_data.fin);
         }
         else if (theme_selected.val() == "bullshit"){
-            var bullshit = new Citation(bullshit_data.debut, bullshit_data.milieu, bullshit_data.fin);
-            var bullshit_generated = bullshit.generate();
-            console.log(bullshit_generated);
+            generator = new Citation(bullshit_data.debut, bullshit_data.milieu, bullshit_data.fin);
         }
         else {
             window.alert("choisissez un thème !")
         }
+
+        let quote_generated;
+        for (i=0; i <qtt_citation.val(); i++){
+            quote_generated = generator.generate();
+            recueil_citation.push(quote_generated);
+        }
+
+        console.log(recueil_citation);
+
     });
     
     // if (qtt_citation =! null){
