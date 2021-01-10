@@ -103,18 +103,11 @@ $(document).ready(function () {
         }
 
         console.log(recueil_citation);
+        // show_quotes(recueil_citation);
 
     });
     
-    // if (qtt_citation =! null){
-    //     for (i in qtt_citation.lengt){
-    //         haiku.generate;
-    //     }
-        
-    // }
-    // else{
-    //     window.alert("Choisissez un nombre de citation")
-    // };
+
 });
 
 
@@ -122,9 +115,3 @@ $(document).ready(function () {
 //   HTMLSelectElement.selectedIndex
 
 
-// Si l'input est égal à haiku, on retourne l'objet haiku, c'est ) dire une citation construite par la concaténation de trois parties générée aléatoirement grâce au randIndex)
-// input = choix;
-// if choix = haiku
-// --> return(haiku);
-// else:
-// return(bullshit);
