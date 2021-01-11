@@ -1,3 +1,9 @@
+function show_quotes(){
+    // if div = empty
+    // ineerHTML.recueil_citation;
+    // else clean div && innerHTML.recueil_citation;
+
+}
 
 function Citation(debut, milieu, fin)  {
     this.debut = debut;
