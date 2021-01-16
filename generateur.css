@@ -42,3 +42,24 @@ label{
     font-weight: 500;
     padding: 0.25rem 0.5rem;
 }
+
+.cadre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding: 2rem 1rem;
+}
+
+.quote{
+    position: relative;
+    padding:2rem;
+    background: linear-gradient(RGBA(255, 255, 255, 0.5), RGBA(255, 255, 255, 0.5));
+}
+
+.quote:after{
+    position: absolute;
+    top:-1rem;
+    left: 50%;
+    transform:translateX(-50%);
+}
